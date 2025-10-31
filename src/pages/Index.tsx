@@ -83,7 +83,8 @@ const Index = () => {
       genre: "Поэзия",
       quote: "Степь научила меня видеть красоту в простом и находить метафоры в повседневном",
       work: "Сборник «Горизонты»",
-      achievement: "Премия «Степь» 2023"
+      achievement: "Премия «Степь» 2023",
+      photo: "https://cdn.poehali.dev/files/f1a672b1-254b-4121-9bf7-c508fee74079.JPG"
     },
     {
       name: "Михаил Северов",
@@ -282,9 +283,17 @@ const Index = () => {
                 className="p-6 border-2 hover:border-primary transition-all duration-300 hover:shadow-xl group bg-white overflow-hidden"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-200 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Icon name="User" className="text-primary" size={32} />
-                  </div>
+                  {author.photo ? (
+                    <img 
+                      src={author.photo} 
+                      alt={author.name}
+                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-200 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="User" className="text-primary" size={32} />
+                    </div>
+                  )}
                   <div>
                     <h3 className="text-xl font-bold text-secondary mb-1">{author.name}</h3>
                     <p className="text-sm text-muted-foreground">{author.genre}</p>
