@@ -77,6 +77,51 @@ const Index = () => {
     { value: "12", label: "Мероприятий в год" }
   ];
 
+  const authors = [
+    {
+      name: "Анна Светлова",
+      genre: "Поэзия",
+      quote: "Степь научила меня видеть красоту в простом и находить метафоры в повседневном",
+      work: "Сборник «Горизонты»",
+      achievement: "Премия «Степь» 2023"
+    },
+    {
+      name: "Михаил Северов",
+      genre: "Проза",
+      quote: "Здесь я нашёл не только читателей, но и настоящих друзей по перу",
+      work: "Роман «Тихий город»",
+      achievement: "Публикация в альманахе"
+    },
+    {
+      name: "Елена Волкова",
+      genre: "Драматургия",
+      quote: "Литературные вечера объединения дали мне уверенность выйти на сцену",
+      work: "Пьеса «Между строк»",
+      achievement: "Постановка в театре"
+    },
+    {
+      name: "Дмитрий Ковалёв",
+      genre: "Фантастика",
+      quote: "Мастерские помогли найти свой уникальный голос в современной литературе",
+      work: "Цикл рассказов «Завтра»",
+      achievement: "Лауреат конкурса 2024"
+    },
+    {
+      name: "Ольга Морозова",
+      genre: "Детская литература",
+      quote: "Благодаря объединению моя первая книга увидела свет",
+      work: "Сказки «Лесные истории»",
+      achievement: "Издание тиражом 5000"
+    },
+    {
+      name: "Сергей Белов",
+      genre: "Публицистика",
+      quote: "Критика и поддержка коллег сделали мои тексты значительно сильнее",
+      work: "Эссе «Время перемен»",
+      achievement: "Публикация в журнале"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50/30 to-white">
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
@@ -99,6 +144,12 @@ const Index = () => {
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Направления
+            </button>
+            <button 
+              onClick={() => scrollToSection("authors")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Авторы
             </button>
             <Button>Связаться</Button>
           </div>
@@ -207,6 +258,50 @@ const Index = () => {
                       <span className="text-muted-foreground">{highlight}</span>
                     </div>
                   ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="authors" className="py-20 px-6 bg-white/50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+              Наши авторы
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Талантливые писатели и поэты, чьи произведения получили признание
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {authors.map((author, index) => (
+              <Card 
+                key={index}
+                className="p-6 border-2 hover:border-primary transition-all duration-300 hover:shadow-xl group bg-white overflow-hidden"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-200 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="User" className="text-primary" size={32} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-secondary mb-1">{author.name}</h3>
+                    <p className="text-sm text-muted-foreground">{author.genre}</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed italic">
+                  "{author.quote}"
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Icon name="BookOpen" className="text-primary" size={16} />
+                    <span className="text-muted-foreground font-medium">{author.work}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Icon name="Award" className="text-primary" size={16} />
+                    <span className="text-muted-foreground">{author.achievement}</span>
+                  </div>
                 </div>
               </Card>
             ))}
