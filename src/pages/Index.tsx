@@ -10,71 +10,71 @@ const Index = () => {
 
   const features = [
     {
-      icon: "Zap",
-      title: "Инновационные решения",
-      description: "Внедряем передовые технологии для достижения ваших бизнес-целей"
+      icon: "BookOpen",
+      title: "Литературное сообщество",
+      description: "Объединяем авторов разных жанров и направлений для обмена опытом"
     },
     {
-      icon: "Shield",
-      title: "Безопасность",
-      description: "Гарантируем защиту данных на всех уровнях взаимодействия"
+      icon: "Feather",
+      title: "Творческая свобода",
+      description: "Поддерживаем экспериментальные формы и смелые художественные решения"
     },
     {
-      icon: "TrendingUp",
-      title: "Рост эффективности",
-      description: "Оптимизируем процессы и увеличиваем продуктивность вашего бизнеса"
+      icon: "Award",
+      title: "Признание талантов",
+      description: "Проводим конкурсы, премии и мероприятия для продвижения авторов"
     },
     {
       icon: "Users",
-      title: "Экспертная команда",
-      description: "Профессионалы с многолетним опытом в цифровой трансформации"
+      title: "Профессиональная среда",
+      description: "Литературные критики, редакторы и опытные писатели в одном месте"
     }
   ];
 
   const services = [
     {
-      icon: "Code",
-      title: "Разработка ПО",
-      description: "Создаём кастомные решения, идеально подходящие под ваши задачи",
-      highlights: ["Web-приложения", "Мобильные решения", "API интеграции"]
+      icon: "Pen",
+      title: "Литературные мастерские",
+      description: "Регулярные встречи для обсуждения произведений и мастер-классы от признанных авторов",
+      highlights: ["Еженедельные встречи", "Разбор текстов", "Обратная связь от профи"]
     },
     {
-      icon: "Database",
-      title: "Аналитика данных",
-      description: "Превращаем данные в стратегические преимущества для бизнеса",
-      highlights: ["Big Data", "BI системы", "Прогнозирование"]
+      icon: "BookText",
+      title: "Публикации",
+      description: "Издаём альманахи, антологии и индивидуальные сборники членов объединения",
+      highlights: ["Альманах «Степь»", "Авторские сборники", "Электронные версии"]
     },
     {
-      icon: "Cloud",
-      title: "Облачные сервисы",
-      description: "Масштабируемая инфраструктура для роста вашего проекта",
-      highlights: ["Cloud Migration", "DevOps", "Kubernetes"]
+      icon: "Mic",
+      title: "Литературные вечера",
+      description: "Организуем авторские чтения, поэтические вечера и встречи с читателями",
+      highlights: ["Открытый микрофон", "Тематические вечера", "Презентации книг"]
     },
     {
-      icon: "Cpu",
-      title: "AI & ML решения",
-      description: "Интеграция искусственного интеллекта в бизнес-процессы",
-      highlights: ["Автоматизация", "Чат-боты", "Распознавание"]
+      icon: "Trophy",
+      title: "Конкурсы и премии",
+      description: "Проводим литературные конкурсы и вручаем премии лучшим произведениям года",
+      highlights: ["Ежегодная премия", "Молодые авторы", "Разные жанры"]
     },
     {
-      icon: "Lock",
-      title: "Кибербезопасность",
-      description: "Комплексная защита IT-инфраструктуры от современных угроз",
-      highlights: ["Аудит безопасности", "Пентесты", "SIEM системы"]
+      icon: "Library",
+      title: "Литературная критика",
+      description: "Профессиональный анализ произведений и помощь в развитии авторского стиля",
+      highlights: ["Рецензирование", "Редактура", "Консультации"]
     },
     {
-      icon: "Headphones",
-      title: "Техподдержка 24/7",
-      description: "Круглосуточная поддержка и сопровождение ваших проектов",
-      highlights: ["SLA гарантии", "Мониторинг", "Быстрый отклик"]
+      icon: "GraduationCap",
+      title: "Образовательные программы",
+      description: "Курсы по литературному мастерству, истории литературы и издательскому делу",
+      highlights: ["Творческое письмо", "Литературоведение", "Издательское дело"]
     }
   ];
 
   const stats = [
-    { value: "500+", label: "Проектов" },
-    { value: "98%", label: "Удовлетворённых клиентов" },
-    { value: "15+", label: "Лет на рынке" },
-    { value: "24/7", label: "Поддержка" }
+    { value: "200+", label: "Авторов" },
+    { value: "50+", label: "Публикаций" },
+    { value: "10+", label: "Лет работы" },
+    { value: "12", label: "Мероприятий в год" }
   ];
 
   return (
@@ -85,7 +85,7 @@ const Index = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Icon name="Sparkles" className="text-white" size={24} />
             </div>
-            <span className="text-2xl font-bold text-secondary">BibNeklin</span>
+            <span className="text-2xl font-bold text-secondary">Степь</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <button 
@@ -98,7 +98,7 @@ const Index = () => {
               onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Услуги
+              Направления
             </button>
             <Button>Связаться</Button>
           </div>
@@ -113,10 +113,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-secondary">
-                Технологии <span className="text-primary">будущего</span> для вашего бизнеса
+                Литературное объединение <span className="text-primary">«Степь»</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Создаём инновационные цифровые решения, которые трансформируют бизнес-процессы и открывают новые возможности для роста
+                Объединяем писателей, поэтов и литературных критиков для создания, обсуждения и продвижения современной литературы
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
@@ -124,7 +124,7 @@ const Index = () => {
                   className="text-lg px-8 py-6"
                   onClick={() => scrollToSection("services")}
                 >
-                  Наши услуги
+                  Наши направления
                   <Icon name="ArrowRight" className="ml-2" size={20} />
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
@@ -159,7 +159,7 @@ const Index = () => {
               Почему выбирают нас
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Мы предлагаем комплексный подход к цифровой трансформации
+              Создаём условия для творческого роста и литературной самореализации
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -183,10 +183,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
-              Наши услуги
+              Наши направления
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Полный спектр IT-решений для развития вашего бизнеса
+              Полный спектр литературной деятельности для развития вашего таланта
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,14 +217,14 @@ const Index = () => {
       <section className="py-20 px-6 bg-gradient-to-br from-primary to-blue-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Готовы начать сотрудничество?
+            Присоединяйтесь к нам
           </h2>
           <p className="text-xl mb-10 opacity-90 animate-fade-in">
-            Свяжитесь с нами и получите консультацию по вашему проекту
+            Станьте частью литературного сообщества и развивайте свой талант вместе с нами
           </p>
           <div className="flex flex-wrap gap-4 justify-center animate-scale-in">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-              Оставить заявку
+              Вступить в объединение
               <Icon name="Send" className="ml-2" size={20} />
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 hover:bg-white/20 text-white border-white/30">
@@ -243,10 +243,10 @@ const Index = () => {
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                   <Icon name="Sparkles" className="text-white" size={24} />
                 </div>
-                <span className="text-2xl font-bold">BibNeklin</span>
+                <span className="text-2xl font-bold">Степь</span>
               </div>
               <p className="text-white/70 text-sm">
-                Инновационные IT-решения для вашего бизнеса
+                Литературное объединение для творческих людей
               </p>
             </div>
             <div>
@@ -258,24 +258,24 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Услуги</h4>
+              <h4 className="font-bold mb-4">Деятельность</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition-colors">Разработка</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Консалтинг</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Поддержка</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Мастерские</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Публикации</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Мероприятия</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li>info@bibneklin.ru</li>
+                <li>info@step-lit.ru</li>
                 <li>+7 (XXX) XXX-XX-XX</li>
-                <li>Москва, Россия</li>
+                <li>Россия</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-white/20 pt-8 text-center text-sm text-white/60">
-            © 2024 BibNeklin. Все права защищены.
+            © 2024 Литературное объединение «Степь». Все права защищены.
           </div>
         </div>
       </footer>
