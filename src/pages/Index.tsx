@@ -80,33 +80,27 @@ const Index = () => {
   const authors = [
     {
       name: "Ольга Сафронова",
-      genre: "Поэзия",
       quote: "Степь научила меня видеть красоту в простом и находить метафоры в повседневном",
       photo: "https://cdn.poehali.dev/files/f1a672b1-254b-4121-9bf7-c508fee74079.JPG"
     },
     {
       name: "Михаил Северов",
-      genre: "Проза",
       quote: "Здесь я нашёл не только читателей, но и настоящих друзей по перу"
     },
     {
       name: "Елена Волкова",
-      genre: "Драматургия",
       quote: "Литературные вечера объединения дали мне уверенность выйти на сцену"
     },
     {
       name: "Дмитрий Ковалёв",
-      genre: "Фантастика",
       quote: "Мастерские помогли найти свой уникальный голос в современной литературе"
     },
     {
       name: "Ольга Морозова",
-      genre: "Детская литература",
       quote: "Благодаря объединению моя первая книга увидела свет"
     },
     {
       name: "Сергей Белов",
-      genre: "Публицистика",
       quote: "Критика и поддержка коллег сделали мои тексты значительно сильнее"
     }
   ];
@@ -283,8 +277,7 @@ const Index = () => {
                     </div>
                   )}
                   <div>
-                    <h3 className="text-xl font-bold text-secondary mb-1">{author.name}</h3>
-                    <p className="text-sm text-muted-foreground">{author.genre}</p>
+                    <h3 className="text-xl font-bold text-secondary">{author.name}</h3>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed italic">
